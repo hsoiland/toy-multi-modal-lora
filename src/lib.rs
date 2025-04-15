@@ -1,4 +1,3 @@
-// src/main.rs
 use ndarray::{Array2, Array};
 use rand::prelude::*;
 
@@ -36,11 +35,6 @@ pub fn generate_multimodal_data(samples: usize, dim_text: usize, dim_image: usiz
     let noise = Array::from_shape_fn((samples, dim_text + dim_image), |_| rng.gen_range(-0.1f32..0.1f32));
     let y = fusion.dot(&true_w.t()) + 0.05 * noise;
     (text, image, y)
-}
-
-fn main() {
-    // Call the library function
-    simple_rust_lora::train_multimodal_lora();
 }
 
 pub fn train_multimodal_lora() -> f32 {
@@ -115,4 +109,4 @@ pub fn train_multimodal_lora() -> f32 {
     
     // Return the final MSE for testing
     mse
-}
+} 

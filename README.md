@@ -51,9 +51,10 @@ LoRA represents weight updates as the product of two low-rank matrices (A and B)
 ## Maintainability Features
 
 - **Clean Separation of Concerns**: LoRA layer separate from training logic
-- **Comprehensive Tests**: Ensures model convergence remains stable
+- **Comprehensive Tests**: Ensures model convergence remains stable with tests in a dedicated directory
 - **Explicit Dimensionality Comments**: Matrix shapes documented for future maintainers
 - **Minimal Dependencies**: Only ndarray and rand needed
+- **Well-Organized Code Structure**: Separate library and test files for better maintainability
 
 ## Usage
 
