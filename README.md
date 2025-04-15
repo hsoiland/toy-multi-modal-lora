@@ -68,3 +68,4 @@ While maintaining minimalism, this implementation could be extended with:
 6. Visualization tools to plot loss curves across different ranks (1, 2, 4)
 7. Early fusion and cross-modal attention for more advanced architectures
 8. ONNX export for LoRA-only delta application
+9. Integration with Burn, Rust's native deep learning framework, for autodifferentiation and GPU acceleration
