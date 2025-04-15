@@ -1,6 +1,6 @@
 I reappraoched this in pure rust as a simple way to distil my learnings from the lora-exploration project, setting a base for my continued learning in machine learning. 
 
-A toy example allows me to show understanding of the core concepts in a small, easy to consume and understandable fasion while still proving the concept. The trade off here is that by abstracting away real data we are able to focus solely on the technicals involved, we avoid data selection and parameter tuning but we miss out on have real inputs and outputs. 
+A toy example allows me to show understanding of the core concepts in a small, easy to consume and understandable fasion while still proving the concept. The trade off here is that by abstracting away real data we are able to focus solely on the technicals involved, we avoid data selection and fine parameter tuning complexity but we miss out on have real inputs and outputs. 
 
 # LoRA in Pure Rust — Minimal, Tested, Multimodal
 
@@ -8,7 +8,7 @@ A lightweight implementation of Low-Rank Adaptation (LoRA) in Rust, demonstratin
 
 ## How LoRA Training Works
 
-Instead of fine-tuning full weight matrices \( W \), LoRA learns an efficient low-rank approximation:
+Instead of fine-tuning full weight matrices W , LoRA learns an efficient low-rank approximation:
 
 ΔW=B⋅A
 Where:
