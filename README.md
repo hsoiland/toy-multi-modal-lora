@@ -6,6 +6,11 @@ A toy example allows me to show understanding of the core concepts in a small, e
 
 A lightweight implementation of Low-Rank Adaptation (LoRA) in Rust, demonstrating parameter-efficient fine-tuning techniques through a simple, maintainable codebase.
 
+LoRA introduces updates to model weights as the product of two low-rank matrices:
+
+Δ𝑊= 𝐵⋅𝐴
+
+
 ## Overview
 
 This project implements LoRA, a technique that enables efficient fine-tuning of large models by updating only a small number of parameters. The implementation is:
