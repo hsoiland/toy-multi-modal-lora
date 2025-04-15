@@ -10,29 +10,22 @@ A lightweight implementation of Low-Rank Adaptation (LoRA) in Rust, demonstratin
 
 Instead of fine-tuning full weight matrices \( W \), LoRA learns an efficient low-rank approximation:
 
-\[
-\Delta W = B \cdot A
-\]
-
+ΔW=B⋅A
 Where:
-- \( A \in \mathbb{R}^{r \times d} \): projects input down to a smaller latent space
-- \( B \in \mathbb{R}^{d \times r} \): projects back up to match the original dimensionality
-- \( r \ll d \): rank is much smaller than the full weight size
+- A∈R r×d: projects input down to a smaller latent space
+- 𝐵∈𝑅^(𝑑×𝑟): projects back up to match the original dimensionality
+- r≪d: rank is much smaller than the full weight size
 
 In this implementation:
 - The base weights (e.g. identity matrix) are **frozen**
 - Only the LoRA weights **A** and **B** are trained
 - The final adapted output is computed as:
 
-\[
-x_{\text{adapted}} = x \cdot A^T \cdot B^T \cdot \text{scale}
-\]
+xadapted = x ⋅ A^T ⋅ B^T ⋅ scale
 
 Which is equivalent to applying:
 
-\[
-x \cdot (\Delta W)^T \quad \text{where} \quad \Delta W = B \cdot A
-\]
+x⋅(ΔW)^T where ΔW=B⋅A
 
 This structure enables substantial reductions in trainable parameters while preserving model performance.
 
